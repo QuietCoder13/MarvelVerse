@@ -4,9 +4,12 @@ from sqlalchemy import select
 from app.database import get_db
 from app.models.movie import Movie
 from app.schemas.movie import MovieCreate,MovieUpdate
-from app.routes import movies,auth
+from app.routes import movies,auth,watchlist,prerequisites
+
 
 app=FastAPI()
 
 app.include_router(movies.router)
 app.include_router(auth.router)
+app.include_router(watchlist.router)
+app.include_router(prerequisites.router)

@@ -24,5 +24,7 @@ def get_db():
 
 from app.models.user import User
 from app.models.movie import Movie
+from app.models.watchlist import Watchlist
+from app.models.movie_prerequisite import MoviePrerequisite
 
 Base.metadata.create_all(bind=engine)
